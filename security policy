@@ -1,0 +1,441 @@
+# ThriftFlip Security Policy
+
+**Last Updated: November 10, 2025**
+
+NextEleven Studios ("we," "us," or "our") is committed to protecting the security of ThriftFlip and our users' data. This Security Policy outlines our security measures, practices, and procedures for maintaining the security and integrity of the ThriftFlip mobile application.
+
+## 1. Security Overview
+
+ThriftFlip is designed with security and privacy as fundamental principles. We implement multiple layers of security to protect user data and ensure the app's secure operation.
+
+### Security Principles
+
+- **Privacy by Design**: Data is stored locally on user devices, minimizing exposure
+- **Defense in Depth**: Multiple security layers protect against threats
+- **Least Privilege**: App requests only necessary permissions
+- **Secure by Default**: Security measures are enabled by default
+- **Transparency**: We are transparent about our security practices
+
+## 2. Data Protection
+
+### Local Data Storage
+
+- **Storage Location**: All user data (flip records, watchlist items, preferences) is stored locally on the user's device using Apple's SwiftData framework
+- **No Cloud Storage**: We do not store user data on our servers, eliminating server-side data breach risks
+- **Device Encryption**: Data stored locally is protected by iOS's built-in encryption (Data Protection API)
+- **Keychain Storage**: Sensitive data (if any) is stored in iOS Keychain with appropriate protection classes
+
+### Data Encryption
+
+- **At Rest**: Data stored on device is encrypted using iOS's Data Protection API
+- **In Transit**: All network communications use HTTPS/TLS 1.2 or higher
+- **Image Processing**: Images are processed locally on device and never transmitted to our servers
+- **API Communications**: All API requests use HTTPS encryption
+
+### Data Access Control
+
+- **User Control**: Users have full control over their data
+- **No Backend Access**: We do not have backend access to user data
+- **Permission-Based**: App requests permissions only when needed
+- **User Deletion**: Users can delete all data by deleting the app
+
+## 3. API Security
+
+### Secure Communication
+
+- **HTTPS Enforcement**: All API communications use HTTPS/TLS encryption
+- **Certificate Validation**: API endpoints use valid SSL certificates
+- **Secure URLs**: All URLs are validated and converted to HTTPS when possible
+- **No HTTP**: HTTP connections are automatically upgraded to HTTPS
+
+### API Key Management
+
+- **Secure Storage**: API keys are stored securely and not hardcoded in production
+- **Environment Variables**: API keys are loaded from environment variables or secure configuration
+- **Key Rotation**: API keys can be rotated without app updates
+- **No Exposure**: API keys are never exposed in logs, error messages, or client-side code
+
+### API Request Security
+
+- **Input Validation**: All user inputs are validated before sending to APIs
+- **Rate Limiting**: API requests are rate-limited to prevent abuse
+- **Error Handling**: Error messages do not expose sensitive information
+- **Timeout Handling**: API requests have appropriate timeouts to prevent hanging connections
+
+### Third-Party API Security
+
+- **Vetted Providers**: We only use reputable, vetted third-party API providers
+- **API Contracts**: We use official API contracts and documentation
+- **Data Minimization**: We send only necessary data to APIs (no personal information)
+- **Privacy Policies**: All third-party APIs have published privacy policies
+
+## 4. Authentication & Authorization
+
+### Subscription Authentication
+
+- **StoreKit 2**: Subscription authentication uses Apple's StoreKit 2 framework
+- **Transaction Verification**: All transactions are cryptographically verified
+- **Receipt Validation**: Subscription receipts are validated through Apple's servers
+- **No Credentials**: We do not store or process payment credentials
+
+### Permission Management
+
+- **On-Demand Requests**: Permissions are requested only when needed
+- **User Control**: Users can grant or revoke permissions at any time
+- **Graceful Degradation**: App functions with limited features if permissions are denied
+- **Clear Messaging**: Permission requests include clear explanations of why access is needed
+
+### Authorization Checks
+
+- **Subscription Status**: Subscription status is verified before granting access to premium features
+- **Local Verification**: Subscription status is verified locally using StoreKit
+- **Real-Time Updates**: Subscription status is updated in real-time
+- **Secure Storage**: Subscription status is stored securely on device
+
+## 5. Code Security
+
+### Secure Coding Practices
+
+- **Type Safety**: Code uses Swift's type system to prevent type-related vulnerabilities
+- **Input Validation**: All user inputs are validated and sanitized
+- **Error Handling**: Comprehensive error handling prevents information leakage
+- **No Eval**: No dynamic code execution or eval() functions
+- **Memory Safety**: Swift's memory safety features prevent buffer overflows
+
+### Code Review
+
+- **Peer Review**: Code changes are reviewed before deployment
+- **Security Review**: Security-sensitive code receives additional review
+- **Static Analysis**: Code is analyzed for security vulnerabilities
+- **Dependency Scanning**: Third-party dependencies are scanned for vulnerabilities
+
+### Secure Configuration
+
+- **No Hardcoded Secrets**: No API keys, passwords, or secrets hardcoded in source code
+- **Environment Configuration**: Configuration is loaded from environment variables
+- **Secure Defaults**: Security features are enabled by default
+- **Configuration Validation**: Configuration is validated at startup
+
+## 6. Network Security
+
+### HTTPS Enforcement
+
+- **TLS 1.2+**: All network communications use TLS 1.2 or higher
+- **Certificate Validation**: SSL certificates are validated for all connections
+- **HTTP Upgrade**: HTTP URLs are automatically upgraded to HTTPS
+- **Secure Redirects**: Secure redirects are used when necessary
+
+### Network Request Security
+
+- **URL Validation**: All URLs are validated before use
+- **Query Parameter Sanitization**: Query parameters are sanitized to prevent injection attacks
+- **Header Security**: Security headers are included in API requests
+- **Request Timeouts**: All requests have appropriate timeouts
+
+### Network Monitoring
+
+- **Error Logging**: Network errors are logged for monitoring (without sensitive data)
+- **Performance Monitoring**: Network performance is monitored
+- **Anomaly Detection**: Unusual network patterns are detected and investigated
+
+## 7. Vulnerability Management
+
+### Vulnerability Reporting
+
+We encourage responsible disclosure of security vulnerabilities. If you discover a security vulnerability, please report it to us at:
+
+**Email**: [security@nextelevenstudios.com](mailto:security@nextelevenstudios.com)  
+**Subject**: Security Vulnerability - ThriftFlip
+
+### Vulnerability Response Process
+
+1. **Acknowledgment**: We will acknowledge receipt of your report within 48 hours
+2. **Investigation**: We will investigate the vulnerability and assess its severity
+3. **Remediation**: We will develop and test a fix for the vulnerability
+4. **Disclosure**: We will coordinate disclosure with you and release a fix
+5. **Credits**: We will credit you (if desired) for responsible disclosure
+
+### Vulnerability Severity Levels
+
+- **Critical**: Immediate threat to user data or app security
+- **High**: Significant security risk that could be exploited
+- **Medium**: Security risk that requires attention
+- **Low**: Minor security issue with limited impact
+
+### Response Times
+
+- **Critical**: 24-48 hours
+- **High**: 3-5 business days
+- **Medium**: 1-2 weeks
+- **Low**: Next release cycle
+
+## 8. Incident Response
+
+### Security Incident Response Plan
+
+In the event of a security incident, we follow a structured response process:
+
+1. **Detection**: Identify and confirm the security incident
+2. **Containment**: Contain the incident to prevent further damage
+3. **Investigation**: Investigate the cause and extent of the incident
+4. **Remediation**: Fix the vulnerability and restore normal operations
+5. **Communication**: Notify affected users if necessary
+6. **Post-Incident**: Review and improve security measures
+
+### Incident Notification
+
+- **User Notification**: Users will be notified of security incidents that affect their data
+- **Regulatory Notification**: We will notify relevant authorities if required by law
+- **Transparency**: We will be transparent about security incidents and our response
+
+### Incident Reporting
+
+To report a security incident, please contact us at:
+
+**Email**: [security@nextelevenstudios.com](mailto:security@nextelevenstudios.com)  
+**Subject**: Security Incident - ThriftFlip
+
+## 9. Security Updates
+
+### Regular Updates
+
+- **Security Patches**: We release security patches as needed
+- **Regular Updates**: We release regular updates with security improvements
+- **Dependency Updates**: We keep dependencies up to date with security fixes
+- **iOS Updates**: We support the latest iOS versions and security features
+
+### Update Process
+
+- **Testing**: All updates are tested before release
+- **Staged Rollout**: Updates are rolled out gradually
+- **Rollback Plan**: We have a plan to roll back updates if issues are discovered
+- **User Notification**: Users are notified of critical security updates
+
+### Update Frequency
+
+- **Critical Security**: Immediately
+- **High Priority**: Within 1 week
+- **Regular Updates**: Monthly or as needed
+- **Feature Updates**: As part of regular release cycle
+
+## 10. Compliance & Standards
+
+### Regulatory Compliance
+
+- **GDPR**: Compliant with General Data Protection Regulation (EEA users)
+- **CCPA**: Compliant with California Consumer Privacy Act (California residents)
+- **COPPA**: Compliant with Children's Online Privacy Protection Act
+- **Apple Guidelines**: Compliant with Apple App Store Review Guidelines
+
+### Security Standards
+
+- **OWASP**: We follow OWASP Mobile Security best practices
+- **iOS Security**: We follow Apple's iOS Security Guidelines
+- **Industry Standards**: We follow industry-standard security practices
+- **Best Practices**: We implement security best practices throughout the app
+
+### Security Audits
+
+- **Regular Audits**: We conduct regular security audits
+- **Penetration Testing**: We perform penetration testing as needed
+- **Code Reviews**: We conduct security-focused code reviews
+- **Dependency Audits**: We audit third-party dependencies for vulnerabilities
+
+## 11. Security Best Practices
+
+### For Users
+
+- **Keep iOS Updated**: Keep your iOS device updated with the latest security patches
+- **Use Strong Passcode**: Use a strong passcode or biometric authentication
+- **Review Permissions**: Review and manage app permissions in Settings
+- **Be Cautious**: Be cautious when granting permissions to apps
+- **Report Issues**: Report security issues to us immediately
+
+### For Developers
+
+- **Secure Coding**: Follow secure coding practices
+- **Code Review**: Conduct thorough code reviews
+- **Testing**: Test security features thoroughly
+- **Documentation**: Document security measures and procedures
+- **Training**: Stay updated on security best practices
+
+## 12. Security Features
+
+### Implemented Security Features
+
+- ✅ **Local Data Storage**: All data stored locally on device
+- ✅ **HTTPS Encryption**: All API communications use HTTPS
+- ✅ **Input Validation**: All user inputs are validated
+- ✅ **Error Handling**: Comprehensive error handling
+- ✅ **Permission Management**: On-demand permission requests
+- ✅ **Subscription Security**: Secure subscription handling via StoreKit
+- ✅ **Secure URLs**: HTTPS enforcement for all URLs
+- ✅ **API Key Security**: Secure API key management
+- ✅ **Code Safety**: Type-safe, memory-safe code
+- ✅ **No Hardcoded Secrets**: No secrets in source code
+
+### Planned Security Features
+
+- ⏳ **Certificate Pinning**: Implement certificate pinning for API endpoints
+- ⏳ **Biometric Authentication**: Add biometric authentication for app access
+- ⏳ **Data Export**: Secure data export functionality
+- ⏳ **Audit Logging**: Enhanced audit logging
+- ⏳ **Security Monitoring**: Real-time security monitoring
+
+## 13. Third-Party Security
+
+### Third-Party Services
+
+We use the following third-party services and ensure they meet our security standards:
+
+- **Apple StoreKit**: Subscription processing (Apple's security standards)
+- **eBay API**: Marketplace data (eBay's security standards)
+- **Product Lookup APIs**: Product information (Provider's security standards)
+- **Apple Services**: iOS frameworks and services (Apple's security standards)
+
+### Third-Party Security Assessment
+
+- **Vendor Assessment**: We assess third-party vendors for security
+- **Privacy Policies**: We review third-party privacy policies
+- **Security Practices**: We verify third-party security practices
+- **Incident Response**: We coordinate with third parties on security incidents
+
+## 14. Security Contact Information
+
+### Security Team
+
+For security-related inquiries, vulnerabilities, or incidents, please contact:
+
+**Email**: [security@nextelevenstudios.com](mailto:security@nextelevenstudios.com)  
+**Subject**: Security Inquiry - ThriftFlip
+
+### Response Times
+
+- **Critical Issues**: 24-48 hours
+- **High Priority**: 3-5 business days
+- **General Inquiries**: 1-2 weeks
+
+### Security Resources
+
+- **Privacy Policy**: See our Privacy Policy for data protection practices
+- **Terms of Service**: See our Terms of Service for usage terms
+- **Support**: Contact support for general app issues
+
+## 15. Security Disclosure
+
+### Responsible Disclosure
+
+We encourage responsible disclosure of security vulnerabilities. Please:
+
+- **Do Not**: Exploit vulnerabilities or access user data
+- **Do Not**: Disclose vulnerabilities publicly before we have addressed them
+- **Do**: Report vulnerabilities to us immediately
+- **Do**: Provide detailed information about the vulnerability
+- **Do**: Allow us time to fix the vulnerability before disclosure
+
+### Disclosure Timeline
+
+- **Initial Report**: Within 48 hours
+- **Investigation**: 3-5 business days
+- **Fix Development**: 1-2 weeks (depending on severity)
+- **Public Disclosure**: After fix is released and users are updated
+
+## 16. Security Monitoring
+
+### Ongoing Monitoring
+
+- **Security Logs**: We monitor security logs for suspicious activity
+- **Error Tracking**: We track errors that may indicate security issues
+- **User Reports**: We monitor user reports for security concerns
+- **Threat Intelligence**: We monitor threat intelligence for emerging threats
+
+### Security Metrics
+
+- **Incident Response Time**: Time to respond to security incidents
+- **Vulnerability Resolution**: Time to fix security vulnerabilities
+- **Update Frequency**: Frequency of security updates
+- **User Reports**: Number of security-related user reports
+
+## 17. Security Training
+
+### Developer Training
+
+- **Secure Coding**: Training on secure coding practices
+- **Security Awareness**: Training on security awareness
+- **Incident Response**: Training on incident response procedures
+- **Regular Updates**: Regular updates on security best practices
+
+### User Education
+
+- **Security Tips**: Provide security tips to users
+- **Privacy Guidelines**: Educate users on privacy best practices
+- **Permission Management**: Help users manage app permissions
+- **Update Notifications**: Notify users of security updates
+
+## 18. Security Compliance
+
+### Compliance Requirements
+
+- **Apple App Store**: Compliance with Apple App Store security requirements
+- **GDPR**: Compliance with GDPR security requirements
+- **CCPA**: Compliance with CCPA security requirements
+- **Industry Standards**: Compliance with industry security standards
+
+### Compliance Audits
+
+- **Regular Audits**: Regular compliance audits
+- **Security Assessments**: Regular security assessments
+- **Penetration Testing**: Regular penetration testing
+- **Code Reviews**: Regular security code reviews
+
+## 19. Security Updates & Changes
+
+### Policy Updates
+
+This Security Policy may be updated from time to time to reflect changes in our security practices or legal requirements. We will:
+
+- **Notify Users**: Notify users of significant changes
+- **Update Date**: Update the "Last Updated" date
+- **Document Changes**: Document changes in the policy
+- **Maintain History**: Maintain a history of policy changes
+
+### Change Notification
+
+- **Significant Changes**: Users will be notified of significant changes
+- **Minor Changes**: Minor changes will be reflected in the updated policy
+- **Effective Date**: Changes will be effective as of the "Last Updated" date
+
+## 20. Security Summary
+
+### Security Measures
+
+- ✅ **Local Data Storage**: All data stored locally on device
+- ✅ **HTTPS Encryption**: All communications encrypted
+- ✅ **Input Validation**: All inputs validated
+- ✅ **Error Handling**: Comprehensive error handling
+- ✅ **Permission Management**: Secure permission handling
+- ✅ **Subscription Security**: Secure subscription processing
+- ✅ **Code Security**: Secure coding practices
+- ✅ **API Security**: Secure API communications
+- ✅ **Vulnerability Management**: Responsible disclosure process
+- ✅ **Incident Response**: Structured incident response plan
+
+### Security Commitment
+
+We are committed to:
+- **Protecting User Data**: Protecting user data and privacy
+- **Maintaining Security**: Maintaining high security standards
+- **Responding to Threats**: Responding quickly to security threats
+- **Improving Security**: Continuously improving security measures
+- **Transparency**: Being transparent about security practices
+
+---
+
+**Last Updated**: November 10, 2025  
+**App Version**: 1.0.0  
+**Effective Date**: November 10, 2025
+
+---
+
+*This Security Policy is effective as of the date listed above. By using ThriftFlip, you acknowledge that you have read and understood this Security Policy.*
+
