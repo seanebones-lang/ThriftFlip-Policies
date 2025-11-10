@@ -1,0 +1,266 @@
+# ThriftFlip Privacy Policy
+
+**Last Updated: November 10, 2025**
+
+NextEleven Studios ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, share, and safeguard your information when you use the **ThriftFlip** mobile application ("ThriftFlip" or the "App") available on iOS devices through the Apple App Store. By using ThriftFlip, you agree to the practices described in this policy.
+
+ThriftFlip is designed to help users identify, evaluate, and resell items using barcode scanning, AI-powered photo recognition, and multi-marketplace price comparison. We prioritize your privacy and store all data locally on your device.
+
+## 1. Information We Collect
+
+### a. Information You Provide
+
+- **User Content**: Information you input into the app, such as:
+  - Product purchase costs
+  - Flip records (purchase dates, sale dates, notes)
+  - Watchlist items and price alerts
+  - App preferences and settings
+
+- **Subscription Data**: If you subscribe to ThriftFlip Pro, billing information is processed entirely through Apple's in-app purchase system (StoreKit). We do not collect, store, or have access to your payment information, credit card details, or billing address. All subscription transactions are handled by Apple.
+
+### b. Information Collected Automatically
+
+- **Device Information**: Limited device information may be collected through Apple's systems (operating system version, device type) for app functionality and crash reporting. This information is anonymized and used only for app improvement.
+
+- **Camera and Photo Library**: With your explicit permission, we access your device's camera for barcode scanning and photo capture, and your photo library for selecting images. Images are processed locally on your device using Apple's Vision Framework and are never uploaded to our servers or shared with third parties.
+
+### c. Information from Third-Party Services
+
+- **Product Lookup Services**: When you scan a barcode, we may query third-party product databases (UPCItemDB, Barcode Lookup API, OpenFoodFacts) to retrieve product information. These queries include only the barcode number and do not include any personal information.
+
+- **Marketplace APIs**: When you search for product prices, we query marketplace APIs (eBay, Amazon, Mercari, Poshmark, Facebook Marketplace) to retrieve publicly available listing information. These queries include only product identifiers (barcodes, product names, categories) and do not include any personal information.
+
+### d. Data We Do NOT Collect
+
+We do NOT collect:
+- Personal identifying information (name, email, address)
+- Account information (the app does not require user accounts)
+- Location data
+- Contact information
+- Biometric data
+- Health information
+- Financial information beyond what Apple processes for subscriptions
+- Advertising identifiers for tracking
+- Analytics data for marketing purposes
+
+## 2. How We Use Your Information
+
+We use your information solely to:
+
+- **Provide Core Features**: Enable barcode scanning, AI-powered product recognition, price comparison, and flip tracking functionality.
+
+- **Process Subscriptions**: Manage subscription status through Apple's StoreKit system. Subscription transactions are processed entirely by Apple.
+
+- **Improve the App**: Use anonymized crash reports and usage data (provided by Apple) to fix bugs and improve app performance.
+
+- **Local Storage**: Store your flip records, watchlist items, and preferences locally on your device using Apple's SwiftData framework.
+
+## 3. How We Share Your Information
+
+**We do not sell, rent, or share your personal information with third parties for marketing purposes.**
+
+We may share limited, anonymized information only in the following cases:
+
+- **Third-Party Product APIs**: We query product lookup services (UPCItemDB, Barcode Lookup API) using only barcode numbers to retrieve product information. No personal information is shared.
+
+- **Marketplace APIs**: We query marketplace APIs (eBay, Amazon, etc.) using only product identifiers to retrieve publicly available listing information. No personal information is shared.
+
+- **Apple Services**: Subscription information is managed through Apple's StoreKit system. Apple's privacy policy applies to subscription transactions.
+
+- **Legal Requirements**: We may disclose information if required by law, such as to comply with a subpoena, court order, or applicable regulations.
+
+- **Business Transfers**: If NextEleven Studios is involved in a merger or acquisition, your information may be transferred as part of that transaction, with notice to you.
+
+## 4. Data Storage and Security
+
+### Local Storage
+
+- **Primary Storage**: All your data (flip records, watchlist items, scanned products, preferences) is stored locally on your device using Apple's SwiftData framework.
+- **No Cloud Sync**: We do not sync your data to cloud servers. Your data remains on your device.
+- **Data Control**: You have full control over your data. You can delete the app at any time, which will remove all locally stored data.
+
+### Security
+
+- **Encryption**: Data stored locally on your device is protected by iOS's built-in encryption.
+- **No Server Storage**: We do not store your data on our servers, eliminating the risk of data breaches on our end.
+- **Secure APIs**: All API communications use HTTPS encryption.
+
+### Data Retention
+
+- **Local Data**: Your data remains on your device until you delete the app or manually delete items within the app.
+- **Subscription Data**: Subscription information is managed by Apple and subject to Apple's data retention policies.
+- **API Queries**: We do not store the results of API queries. Product information is retrieved in real-time and displayed to you.
+
+## 5. Third-Party Services
+
+ThriftFlip integrates with the following third-party services:
+
+### Product Lookup Services
+- **UPCItemDB**: Product information lookup (Privacy Policy: https://www.upcitemdb.com/privacy)
+- **Barcode Lookup API**: Product information lookup
+- **OpenFoodFacts**: Food product information (Privacy Policy: https://world.openfoodfacts.org/terms-of-use)
+
+### Marketplace APIs
+- **eBay Finding API**: Product listing and pricing information (Privacy Policy: https://www.ebay.com/help/policies/privacy-policy)
+- **Amazon Product Advertising API**: Product information (Privacy Policy: https://www.amazon.com/gp/help/customer/display.html?nodeId=468496)
+- **Mercari**: Product listing information (Privacy Policy: https://www.mercari.com/us/legal/privacy/)
+- **Poshmark**: Product listing information (Privacy Policy: https://poshmark.com/legal/privacy)
+- **Facebook Marketplace**: Product listing information (Privacy Policy: https://www.facebook.com/privacy/explanation)
+
+### Payment Processing
+- **Apple StoreKit**: Subscription payments are processed entirely by Apple (Privacy Policy: https://www.apple.com/privacy/)
+
+These services have their own privacy policies, which you should review. We are not responsible for their practices but ensure we only share the minimum information necessary (product identifiers, not personal information) to provide app functionality.
+
+## 6. Permissions
+
+ThriftFlip requires the following permissions:
+
+### Camera Permission
+- **Purpose**: To scan barcodes and capture photos of items for AI-powered product recognition.
+- **When Requested**: Permission is requested when you tap "Scan Barcode" or "Smart Scan" for the first time.
+- **Usage**: Camera access is used only for scanning and photo capture. Images are processed locally on your device and are never uploaded to our servers.
+
+### Photo Library Permission
+- **Purpose**: To select existing images from your photo library for product analysis.
+- **When Requested**: Permission is requested when you tap "Library" option for the first time.
+- **Usage**: Photo library access is used only to select images. Selected images are processed locally on your device and are never uploaded to our servers.
+
+### Photo Library Write Permission (Optional)
+- **Purpose**: To save scanned product images to your photo library (future feature).
+- **When Requested**: Permission would be requested if you choose to save images.
+- **Usage**: This permission is optional and not currently used. If implemented in the future, it would only be used if you explicitly choose to save images.
+
+### Internet Access
+- **Purpose**: To fetch product information and marketplace pricing data.
+- **Usage**: Internet access is required for core app functionality. All API communications use HTTPS encryption.
+
+You can manage these permissions in your iOS device's **Settings > ThriftFlip**. Denying permissions may limit some features, but the app will continue to function with available features.
+
+## 7. Subscriptions
+
+### Subscription Plans
+
+ThriftFlip offers the following subscription plans:
+
+- **Monthly Subscription**: $9.99/month (auto-renewable)
+- **Annual Subscription**: $79.99/year (auto-renewable, 33% savings)
+- **Free Trial**: 7-day free trial period (automatic on first app launch)
+
+### Subscription Management
+
+- **Payment Processing**: All subscription payments are processed by Apple through StoreKit. We do not collect, store, or have access to your payment information.
+- **Subscription Status**: Subscription status is managed through Apple's systems and verified locally on your device.
+- **Cancellation**: You can cancel your subscription at any time through your Apple ID account settings. Cancellation will take effect at the end of the current billing period.
+- **Restore Purchases**: You can restore your subscription on a new device using the "Restore Purchases" feature in the app settings.
+- **Refunds**: Refund requests must be submitted through Apple's support system. We do not process refunds directly.
+
+### Subscription Data
+
+- **What We Know**: We can see your subscription status (active, expired, in trial) through Apple's StoreKit system.
+- **What We Don't Know**: We do not have access to your payment method, billing address, or transaction history. This information is handled entirely by Apple.
+
+## 8. Your Rights and Choices
+
+Depending on your location, you may have the following rights:
+
+### Data Access
+- **Local Data**: You can view all your data (flip records, watchlist, preferences) within the app.
+- **Export**: You can manually export your data by taking screenshots or notes. (Future feature: CSV/PDF export)
+
+### Data Deletion
+- **Delete Items**: You can delete individual flip records, watchlist items, or scanned products within the app.
+- **Delete All Data**: You can delete all app data by deleting the app from your device.
+- **Subscription Cancellation**: You can cancel your subscription at any time through your Apple ID account settings.
+
+### Permission Management
+- **Camera**: You can grant or revoke camera permission in **Settings > ThriftFlip > Camera**.
+- **Photo Library**: You can grant or revoke photo library permission in **Settings > ThriftFlip > Photos**.
+
+### Opt-Out Options
+- **Subscription**: You can cancel your subscription at any time. Cancellation will take effect at the end of the current billing period.
+- **Permissions**: You can revoke app permissions at any time in your device settings.
+
+To exercise these rights, you can:
+- Manage permissions in your iOS device settings
+- Cancel subscriptions through your Apple ID account settings
+- Delete the app to remove all local data
+- Contact us at [support@nextelevenstudios.com](mailto:support@nextelevenstudios.com) for assistance
+
+## 9. Children's Privacy
+
+ThriftFlip is not intended for users under the age of 13. We do not knowingly collect data from children under 13. Since the app does not require user accounts or collect personal information, there is minimal risk of collecting children's data. However, if you believe we have inadvertently collected data from a child under 13, please contact us immediately at [support@nextelevenstudios.com](mailto:support@nextelevenstudios.com), and we will delete such information promptly.
+
+## 10. Data Transfer and International Users
+
+### Data Location
+- **Local Storage**: All your data is stored locally on your device and is not transferred to our servers.
+- **API Queries**: Product lookup and marketplace API queries may be processed by servers located in various countries. These queries include only product identifiers (barcodes, product names) and no personal information.
+
+### International Users
+- **GDPR Compliance**: For users in the European Economic Area (EEA), we comply with the General Data Protection Regulation (GDPR). Your data is stored locally on your device, and you have full control over it.
+- **CCPA Compliance**: For California residents, we comply with the California Consumer Privacy Act (CCPA). We do not sell your personal information.
+- **Other Jurisdictions**: We comply with applicable privacy laws in other jurisdictions where the app is available.
+
+## 11. Changes to This Privacy Policy
+
+We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will notify you of significant changes by:
+- Updating the "Last Updated" date at the top of this policy
+- Posting a notice in the app (if significant changes occur)
+- Sending an email notification (if you have provided your email address)
+
+Your continued use of the app after changes are made constitutes acceptance of the updated Privacy Policy.
+
+## 12. Contact Us
+
+If you have questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at:
+
+**NextEleven Studios**  
+Email: [support@nextelevenstudios.com](mailto:support@nextelevenstudios.com)
+
+For App Store-specific inquiries (subscriptions, refunds, technical issues), you can also reach out via Apple's support channels.
+
+## 13. App Store Compliance
+
+This Privacy Policy complies with:
+- **Apple App Store Review Guidelines** (Section 5.1.1 - Privacy)
+- **General Data Protection Regulation (GDPR)** - For users in the EEA
+- **California Consumer Privacy Act (CCPA)** - For California residents
+- **Children's Online Privacy Protection Act (COPPA)** - For users under 13
+
+## 14. Summary
+
+### What We Collect
+- **Minimal Data**: We collect only the data you provide (flip records, watchlist items, preferences)
+- **Local Storage**: All data is stored locally on your device
+- **No Personal Information**: We do not collect names, emails, addresses, or other personal identifying information
+- **No Tracking**: We do not track you across apps or websites
+
+### What We Share
+- **Product APIs**: We query product lookup services using only barcode numbers
+- **Marketplace APIs**: We query marketplace APIs using only product identifiers
+- **No Personal Data**: We never share personal information with third parties
+- **No Marketing**: We do not share data for marketing purposes
+
+### Your Control
+- **Local Data**: You have full control over your local data
+- **Permissions**: You can manage app permissions in your device settings
+- **Subscriptions**: You can cancel subscriptions at any time
+- **Deletion**: You can delete all data by deleting the app
+
+### Our Commitment
+- **Privacy First**: We prioritize your privacy and store data locally
+- **Transparency**: We are transparent about our data practices
+- **Security**: We use industry-standard security measures
+- **Compliance**: We comply with applicable privacy laws
+
+---
+
+**Last Updated**: November 10, 2025  
+**App Version**: 1.0.0  
+**Effective Date**: November 10, 2025
+
+---
+
+*This Privacy Policy is effective as of the date listed above. By using ThriftFlip, you acknowledge that you have read and understood this Privacy Policy.*
+
